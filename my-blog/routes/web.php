@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//show all posts
+Route::get('/blog', [\App\Http\Controllers\BlogPostController::class, 'index']);
+
+//show one post by posts number
+Route::get('/blog/{blogPost}', [\App\Http\Controllers\BlogPostController::class, 'show']);
