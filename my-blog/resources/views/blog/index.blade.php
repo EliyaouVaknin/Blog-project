@@ -4,13 +4,12 @@
         <div class="row">
             <div class="col-12 pt-2">
                  <div class="row">
-                    <div class="col-8">
-                        <h1 class="display-one">Our Blog!</h1>
-                        <p>Enjoy reading our posts. Click on a post to read!</p>
+                    <div class="col-10">
+                        <h1 id="title" class="display-one">Bloop.</h1>
+                        <label for="title">The best Blog website that ever made !</label>
                     </div>
-                    <div class="col-4">
-                        <p>Create new Post</p>
-                        <a href="/blog/create/post" class="btn btn-primary btn-sm">Add Post</a>
+                    <div class="col-2">
+                        <a href="/blog/create/post" class="btn btn-primary btn-md">Add Post</a>
                     </div>
                 </div>                
                 @forelse($posts as $post)
