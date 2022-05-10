@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('blog_posts', function (Blueprint $table) {
             $table->id();
-            $table->text('title');  // Title of our blog post          
-            $table->text('body');   // Body of our blog post                  
-            $table->text('user_id'); // user_id of our blog post author
+            $table->string('title');
+            $table->text('body');
+            $table->unsignedBigInteger('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

@@ -37,3 +37,7 @@ Route::put('/blog/{blogPost}/edit', [\App\Http\Controllers\BlogPostController::c
 
 //deletes post from the database
 Route::delete('/blog/{blogPost}', [\App\Http\Controllers\BlogPostController::class, 'destroy']); 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

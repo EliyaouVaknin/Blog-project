@@ -17,7 +17,8 @@ class BlogPostController extends Controller
         $posts = BlogPost::all(); //fetch all blog posts from DB
         return view('blog.index', [
                 'posts' => $posts,
-            ]); //returns the view with posts
+            ]);
+
     }
 
     /**
@@ -41,7 +42,7 @@ class BlogPostController extends Controller
         $newPost = BlogPost::create([
             'title' => $request->title,
             'body' => $request->body,
-            'user_id' => 1
+            'user_id' => auth()->user()->id
         ]);
 
         return redirect('blog/' . $newPost->id);
